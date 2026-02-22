@@ -8,3 +8,13 @@ sudo apt install nginx -y
 sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
+
+#### Helpers sheet
+
+```bash
+# Start, stop, reload, status
+sudo systemctl {start|stop|reload|status} nginx
+
+# Configuration check
+sudo nginx -t
+```
