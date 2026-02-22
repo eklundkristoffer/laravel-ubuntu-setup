@@ -9,8 +9,28 @@ eval "$(ssh-agent -s)"
 
 ssh-add /home/ubuntu/.ssh/myapp-deploy-key
 ```
+2. Add ssh config
+```bash
+sudo vim ~/.ssh/config
+```
+Add:
+```
+Host myapp
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/myapp-deploy-key
+    IdentitiesOnly yes
+```
 
-2. Add the public key to github deploy keys
+Verify:
+```
+ssh -T git@myapp
+```
+
+> [!NOTE]  
+> Keep in mind to use git@myapp, git@myapp2 etc and not git@github.com
+
+3. Add the public key to github deploy keys
 ```bash
 cat /home/ubuntu/.ssh/myapp-deploy-key.pub
 ```
