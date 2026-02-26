@@ -5,7 +5,7 @@ sudo apt update
 
 sudo apt install php8.5-cli -y
 
-sudo apt install php8.5-common php8.5-{bcmath,bz2,curl,gd,gmp,intl,mbstring,readline,xml,zip,mysql} -y
+sudo apt install php8.5-common php8.5-{bcmath,bz2,curl,gd,gmp,intl,mbstring,readline,xml,zip,mysql,pgsql} -y
 
 # php-fpm
 sudo apt install php8.5-fpm
