@@ -20,6 +20,7 @@ Host myapp
     User git
     IdentityFile ~/.ssh/myapp-deploy-key
     IdentitiesOnly yes
+    AddKeysToAgent yes
 ```
 
 Verify:
